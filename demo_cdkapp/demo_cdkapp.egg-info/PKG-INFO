@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: demo-cdkapp
+Version: 0.0.1
+Summary: An empty CDK Python app
+Home-page: UNKNOWN
+Author: author
+License: UNKNOWN
+Description: 
+        # Welcome to your CDK Python project!
+        
+        This is a CDK built 1.84 Python App
+        This project creates a CI/CD pipeline using general best practices and will also auto check the 
+        cloud formation synthesized templates for insecure configurations and fail at build time if 
+        not corrected.
+        
+        Run the following to deploy the cdk pipeline and app
+        
+        ```
+        $ python -m venv .venv
+        ```
+        
+        After the init process completes and the virtualenv is created, you can use the following
+        step to activate your virtualenv.
+        
+        ```
+        $ source .venv/bin/activate
+        ```
+        
+        If you are a Windows Powershell platform, you would activate the virtualenv like this:
+        
+        ```
+        . .venv\Scripts\activate.ps1
+        ```
+        
+        Once the virtualenv is activated, you can install the required dependencies.
+        
+        ```
+        $ pip install -r requirements.txt
+        ```
+        
+        At this point you can now synthesize the CloudFormation template for this code.
+        
+        ```
+        $ cdk synth
+        ```
+        
+        You can now begin exploring the source code, contained in the hello directory.
+        There is also a very trivial test included that can be run like this:
+        
+        ```
+        $ cdk bootstrap --cloudformation-execution-policies arn:aws:iam::aws:policy/AdministratorAccess
+        ```
+        
+        Deploy your app to the AWS account
+        
+        ```
+        $ cdk deploy
+        ```
+        
+        Ensure you have generated your git credentials within IAM and run the following to initialize
+        
+        ```
+        $ git init; git add -A; git commit -m 'initialize'
+        ```
+        
+        Add the origin master git to whichever repo and region you had made (or modified)
+        
+        ```
+        $ git remote add origin https://git-codecommit.us-west-2.amazonaws.com/v1/respos/demo_cicd_pipeline_repo
+        ```
+        
+        
+        Set the upstream origin for git to push and enter credentials
+        
+        ```
+        $ git push â€“set-upstream origin masterâ€™
+        ```
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: JavaScript
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Code Generators
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
